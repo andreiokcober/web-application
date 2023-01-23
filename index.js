@@ -1,6 +1,6 @@
-const linkRegister = document.querySelector('.link-register')
+// const linkRegister = document.querySelector('#link-register')
 
 
-linkRegister.addEventListener('click',(e)=>{
-    e.preventDefault()
-})
+// linkRegister.addEventListener('click',(e)=>{
+//     e.preventDefault()
+// })
