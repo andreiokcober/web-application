@@ -10,7 +10,23 @@
 </head>
 
 <body>
-    <h1>helloy</h1>
+    <div class="main-container">
+        <form action="">
+            <h2 class="title">Авторизация</h2>
+            <div class="input-conteiner">
+                <input type="text" placeholder="Логин" id="input-login">
+                <input type="password" placeholder="Пароль">
+                <div>
+                    <button class="btn btn-signIn" type="submit">Войти</button>
+                </div>
+                <div class="conteiner-register">
+                    <a href="" class="btn link-register">Регистрация</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
