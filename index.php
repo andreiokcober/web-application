@@ -11,13 +11,13 @@
 
 <body>
     <div class="main-container">
-        <form action="">
+        <form action="" method="post">
             <h2 class="title">Авторизация</h2>
             <div class="input-conteiner">
                 <input type="text" placeholder="Логин" name="login" id="input-login">
                 <input type="password" placeholder="Пароль" name="password">
                 <div>
-                    <button class="btn btn-signIn" type="submit">Войти</button>
+                    <button class="btn btn-signIn" type="submit" id="btn-auth">Войти</button>
                 </div>
                 <div class="conteiner-register-auth">
                     <p>or</p> <a href="register.php" class="btn link-hover" id="link-register">Регистрация</a>
@@ -26,6 +26,7 @@
 
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 

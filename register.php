@@ -18,9 +18,9 @@
                 <input type="password" placeholder="Пароль" name="password">
                 <input type="password" placeholder="Повторите пароль" name="confirmPassword">
                 <input type="email" placeholder="Электронная почта" name="email">
-                <input type="text" placeholder="Имя" name="Full-name">
+                <input type="text" placeholder="Имя" name="fullName">
                 <div>
-                    <button class="btn btn-signIn" type="submit">Зарегистрироваться</button>
+                    <button class="btn btn-signIn" type="submit" id="btn-register">Зарегистрироваться</button>
                 </div>
                 <div class="conteiner-register-auth">
                     <a href="index.php" class="btn link-hover" id="link-auth">Авторизация</a>
@@ -29,6 +29,7 @@
 
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 
