@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.1s ease-in;
 }
 body{
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -30,9 +31,7 @@ input{
     padding: 12px 17px;
     border:1px solid rgb(196, 187, 187);
     margin-bottom: 5px;
-}
-input:focus{
-    border:2px solid #63728b;
+    width: 100%;
 }
 .btn-signIn{
     width: 100%;
@@ -65,4 +64,26 @@ a{
     justify-content: center;
     align-items:center;
     text-align: center;
+}
+.profile-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+#profile-user-name{
+    margin-left: 20px;
+    color:#515855;
+}
+.btn-exit:hover{
+    background-color: #877474;
+}
+.btn-exit{
+    margin-left: 10px;
+}
+.error-border{
+    border: 1px solid rgba(245, 4, 4, 0.667);
+}
+.validation-error{
+    margin-bottom: 2px;
 }

@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ($_SESSION['user']) {
+    header('Location:./page/profile.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +20,15 @@
         <form action="" method="post">
             <h2 class="title">Авторизация</h2>
             <div class="input-conteiner">
-                <input type="text" placeholder="Логин" name="login" id="input-login">
-                <input type="password" placeholder="Пароль" name="password">
+                <div name="login">
+                    <input type="text" placeholder="Логин" name="login" id="input-login">
+                </div>
+                <div name="password"><input type="password" placeholder="Пароль" name="password"></div>
                 <div>
                     <button class="btn btn-signIn" type="submit" id="btn-auth">Войти</button>
                 </div>
                 <div class="conteiner-register-auth">
-                    <p>or</p> <a href="register.php" class="btn link-hover" id="link-register">Регистрация</a>
+                    <p>or</p> <a href="./pages/register.php" class="btn link-hover" id="link-register">Регистрация</a>
                 </div>
             </div>
 
