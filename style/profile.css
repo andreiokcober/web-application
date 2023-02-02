@@ -1,0 +1,18 @@
+.profile-exit {
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #6e0404;
+}
+.profile-exit:hover {
+    color: #990b0b;
+    text-decoration: none;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#profile-user-name {
+    margin-left: 20px;
+    color: #515855;
+}

@@ -1,0 +1,30 @@
+.btn-signIn {
+    width: 100%;
+    background: linear-gradient(45deg, black, transparent);
+    margin-top: 20px;
+    transition: all 1s ease-in;
+}
+.btn-signIn:hover {
+    background: linear-gradient(45deg, transparent, black);
+}
+.btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+.link-hover:hover {
+    color: #53575e;
+}
+.btn-exit:hover {
+    background-color: #877474;
+}
+.btn-exit {
+    margin-left: 10px;
+}

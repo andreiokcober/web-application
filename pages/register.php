@@ -17,20 +17,23 @@ session_start();
         <form action="" method="post">
             <h2 class="title">Регистрация</h2>
             <div class="input-conteiner">
-                <div>
+                <div name="login">
                     <input type="text" placeholder="Логин" id="input-login" name="login">
                 </div>
-                <div>
+                <div name="password">
                     <input type="password" placeholder="Пароль" name="password">
                 </div>
-                <div>
+                <div name="confirmPassword">
                     <input type="password" placeholder="Повторите пароль" name="confirmPassword">
                 </div>
-                <div>
+                <div name="email">
                     <input type="email" placeholder="Электронная почта" name="email">
                 </div>
-                <div>
+                <div name="fullName">
                     <input type="text" placeholder="Имя" name="fullName">
+                </div>
+                <div class="error-message">
+                    <p class="error-massage-register"></p>
                 </div>
                 <div>
                     <button class="btn btn-signIn" type="submit" id="btn-register">Зарегистрироваться</button>

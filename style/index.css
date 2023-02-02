@@ -1,3 +1,5 @@
+@import 'button.css';
+@import 'profile.css';
 *{
     box-sizing: border-box;
     margin: 0;
@@ -33,29 +35,6 @@ input{
     margin-bottom: 5px;
     width: 100%;
 }
-.btn-signIn{
-    width: 100%;
-    background: linear-gradient(45deg, black, transparent);
-    margin-top: 20px;
-    transition: all 1s ease-in;
-}
-.btn-signIn:hover{
-    background: linear-gradient(45deg,transparent, black);  
-}
-.btn{
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-.link-hover:hover{
-    color:#53575e;
-}
 .conteiner-register-auth{
     margin-top: 5px;
 }
@@ -64,22 +43,6 @@ a{
     justify-content: center;
     align-items:center;
     text-align: center;
-}
-.profile-container{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    
-}
-#profile-user-name{
-    margin-left: 20px;
-    color:#515855;
-}
-.btn-exit:hover{
-    background-color: #877474;
-}
-.btn-exit{
-    margin-left: 10px;
 }
 .error-border{
     border: 1px solid rgba(245, 4, 4, 0.667);

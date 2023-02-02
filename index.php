@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['user']) {
-    header('Location:./page/profile.php');
+    header('Location:../web-application/pages/profile.php');
 }
 ?>
 <!DOCTYPE html>
@@ -24,6 +24,9 @@ if ($_SESSION['user']) {
                     <input type="text" placeholder="Логин" name="login" id="input-login">
                 </div>
                 <div name="password"><input type="password" placeholder="Пароль" name="password"></div>
+                <div class="error-message">
+                    <p class="error-massage-auth"></p>
+                </div>
                 <div>
                     <button class="btn btn-signIn" type="submit" id="btn-auth">Войти</button>
                 </div>

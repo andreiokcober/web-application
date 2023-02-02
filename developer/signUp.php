@@ -13,11 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (file_exists($file)) {
             $current_data = file_get_contents($file);
             $array_data = json_decode($current_data, true);
-
+            $password = $_POST['password'];
             $newArr = array(
                 'login' => $_POST['login'],
-                'password' => $_POST['password'],
-                'confirmPassword' => $_POST['confirmPassword'],
+                'password' => md5($password),
                 'email' => $_POST['email'],
                 'fullName' => $_POST['fullName'],
             );
@@ -55,9 +54,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($response);
         } else {
             $file = dirname(__FILE__) . '\t.json';
-            // $current_data = file_get_contents($file);
-            // $jsonArr = json_decode($current_data, true);
-            if (file_put_contents($file, getData())) {
+            $current_data = file_get_contents($file);
+            $jsonArr = json_decode($current_data, true);
+            $userInBd = 'false';
+            if ($jsonArr) {
+                for ($i = 0; $i < count($jsonArr); ++$i) {
+                    if ($jsonArr[$i]['login'] === $login || $jsonArr[$i]['email'] === $email) {
+                        $userInBd = 'true';
+                        break;
+                    }
+                }
+            }
+            if ($userInBd == 'true') {
+                $error_field = ['login', 'email'];
+                $response = [
+                    "message" => 'Такой login или email уже используются',
+                    "fields" => $error_field
+                ];
+                echo json_encode($response);
+            } else {
+                file_put_contents($file, getData());
                 $response = [
                     'status' => true
                 ];

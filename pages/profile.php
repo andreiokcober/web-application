@@ -1,6 +1,6 @@
 <?php
-// session_start()
-?>
+session_start()
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +20,12 @@
                 <?= $_SESSION['user']['full_name'] ?>
             </h2>
             <div class="profile-exit">
-                <button class="btn btn-exit" id="exit">Выйти</button>
+                <a href="../developer/profileExit.php" id="profile-exit" class="profile-exit">Выйти</a>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="../index.js"></script>
-    <script src="../js/profile.js"></script>
 </body>
 
 </html>
