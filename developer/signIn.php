@@ -9,14 +9,17 @@ function searchUser($login, $password)
     $current_data = file_get_contents($file);
     $jsonArr = json_decode($current_data, true);
     $userBD = 'false';
-    for ($i = 0; $i < count($jsonArr); ++$i) {
-        if ($jsonArr[$i]['login'] == $login and $jsonArr[$i]['password'] == $password) {
-            $userBD = 'true';
-            $_SESSION['user'] = [
-                "login" => $jsonArr[$i]['login'],
-                "full_name" => $jsonArr[$i]['fullName'],
-                "email" => $jsonArr[$i]['email'],
-            ];
+    if ($jsonArr) {
+        for ($i = 0; $i < count($jsonArr); ++$i) {
+            if ($jsonArr[$i]['login'] == $login and $jsonArr[$i]['password'] == $password) {
+                $userBD = 'true';
+                $_SESSION['user'] = [
+                    "login" => $jsonArr[$i]['login'],
+                    "full_name" => $jsonArr[$i]['fullName'],
+                    "email" => $jsonArr[$i]['email'],
+                ];
+                break;
+            }
         }
     }
     if ($userBD == 'true') {
